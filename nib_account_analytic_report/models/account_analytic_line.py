@@ -7,9 +7,9 @@ from odoo import fields, models
 class AccountAnalyticLine(models.Model):
     _inherit = "account.analytic.line"
 
-    amount_in = fields.Monetary('Ingreso', compute="_compute_in_out",store=True)
-    amount_out = fields.Monetary('Egreso', compute="_compute_in_out",store=True)
-    margen = fields.Monetary('Margen', compute="_compute_in_out",store=True)
+    amount_in = fields.Monetary('Ingreso', compute="_compute_in_out")
+    amount_out = fields.Monetary('Egreso', compute="_compute_in_out")
+    margen = fields.Monetary('Margen', compute="_compute_in_out")
 
 
     def _compute_in_out(self):
